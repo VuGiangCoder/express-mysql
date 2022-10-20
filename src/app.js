@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const dotenv = require('dotenv').config()
+const connectDB = require('./config/connectDB')
 const initWebRouters = require('./routes/web');
 var app = express();
 
@@ -18,6 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //dung tren cung
+connectDB();
 initWebRouters(app)
 
 // catch 404 and forward to error handler

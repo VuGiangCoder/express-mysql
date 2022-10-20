@@ -1,7 +1,13 @@
+const db = require('../models/index')
 
-
-let getHomePage = (req ,res) => {
-    res.send('Hello world')
+let getHomePage = async (req ,res) => {
+    try {
+        let data = await db.User.findAll();
+        res.send(data)
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 let sendMessage = (req, res) => {
     res.send('Home oke')

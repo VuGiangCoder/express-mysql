@@ -1,0 +1,9 @@
+dotenv
+
+npm install --save-dev sequelize sequelize-cli
+
+npx sequelize-cli init
+
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+https://sequelize.org/docs/v6/other-topics/migrations/#installing-the-cli

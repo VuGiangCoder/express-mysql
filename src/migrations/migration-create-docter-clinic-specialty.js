@@ -3,9 +3,6 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable("Doctor_clinic_specialty", {
-      //     doctorId: DataTypes.INTEGER,
-      //   clinicId: DataTypes.INTEGER,
-      //   specialty: DataTypes.INTEGER,
       id: {
         allowNull: false,
         autoIncrement: true,
